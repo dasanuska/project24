@@ -27,12 +27,18 @@ function setup() {
   };
  
   var ball_options = {
-  
+    // restitution: 0.2,
+    // restitution: 1,
+    // restitution: -0.8,
+     restitution: 0.75,
   }
 
   var rock_options = {
-   
-Rock (Red Circle) bounces less when it hits the bottom.
+    restitution: 0.2,
+    // restitution: 1,
+    // restitution: -0.8,
+    // restitution: 0.75,
+
   }
    
   btn2 = createImg('up.png');
@@ -72,7 +78,13 @@ pop();
 
 function vForce()
 {
- Matter.Body.applyForce(ball,{x;0,y;0},{x;0,y;-0.05})
+   Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:-0.05});
+
+  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:0});
+
+  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0.5,y:0});
+
+  // Matter.Body.applyForce(ball,{x:0,y:0},{x:0,y:0.05});
 }
 
 
